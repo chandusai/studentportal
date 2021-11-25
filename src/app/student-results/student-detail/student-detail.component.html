@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card mt-5 shadow-sm">
+        <h5 class="card-header py-4 text-primary">Student Details</h5>
+        <div class="card-body">
+          <div class="row gutters-sm">
+            <div class="col-sm-3"><h6 class="mb-0">First Name</h6></div>
+            <div class="col-sm-9 text-secondary fw-bold">
+              {{ student?.name }}
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3"><h6 class="mb-0">Last Name</h6></div>
+            <div class="col-sm-9 text-secondary fw-bold">
+              {{ student?.surName }}
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3"><h6 class="mb-0">Age</h6></div>
+            <div class="col-sm-9 text-secondary fw-bold">
+              {{ student?.age }}
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3"><h6 class="mb-0">Average Grade</h6></div>
+            <div class="col-sm-9 fw-bold">
+              <span class="badge fw-bold" [ngClass]="setClass(student)">
+                {{ student?.averageGrade }} Grade</span
+              >
+            </div>
+          </div>
+          <hr />
+          <a routerLink="" class="btn btn-primary">Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

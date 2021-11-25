@@ -1,0 +1,13 @@
+<div class="shadow-sm">
+  <div class="card my-5">
+    <div class="d-flex">
+      <div class="card-body">
+        <h2 class="card-title text-primary">Students List</h2>
+        <app-results-table-container
+          [students]="students"
+          (onStudentSelected)="onStudentSelected($event)"
+        ></app-results-table-container>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.gradeA {
+  background-color: green;
+}
+.gradeB {
+  background-color: yellowgreen;
+  color: #000;
+}
+.gradeC {
+  background-color: yellow;
+  color: #000;
+}
+.gradeD {
+  background-color: red;
+}

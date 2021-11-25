@@ -1,0 +1,42 @@
+<div class="container p-4">
+  <div class="col-6 form-group mb-4">
+    <label for="search-bar" class="form-label"></label>
+    <input
+      type="text"
+      [(ngModel)]="searchKey"
+      id="search-bar"
+      class="form-control py-2 fs-5 text"
+      placeholder="Search by First Name"
+    />
+  </div>
+
+  <table class="table table-hover shadow text-center">
+    <thead>
+      <tr class="student-table main text-white bg-primary">
+        <th><h6>S.No</h6></th>
+        <th><h6>First Name</h6></th>
+        <th><h6>Last Name</h6></th>
+        <th><h6>Age</h6></th>
+        <th><h6>Average Grade</h6></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let student of students | searchFilter: searchKey"
+        class="student-table"
+      >
+        <td>{{ student.id }}</td>
+        <td>
+          <a [routerLink]="[student.id]">{{ student.name }}</a>
+        </td>
+        <td>{{ student.surName }}</td>
+        <td>{{ student.age }}</td>
+        <td>
+          <span class="badge fw-bold" [ngClass]="setClass(student)">
+            {{ student?.averageGrade }} Grade</span
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
